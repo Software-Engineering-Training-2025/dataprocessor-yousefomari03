@@ -36,7 +36,7 @@ public class DataProcessorService {
 
 
         List<Integer> Cleanlist = CleaningFactory.getCleaning(cleaningType).clean(data);
-        double Analysislist = AnalysisFactory.getAnalysis(analysisType).Analysis(data);
+        double Analysislist = AnalysisFactory.getAnalysis(analysisType).Analysis(Cleanlist);
         OutputFactory.getOutput(outputType).output(Analysislist);
 
         return  Analysislist;
